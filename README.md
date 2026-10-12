@@ -1,3 +1,3 @@
 # LicenseLens
 
-GenLayer verification of software release evidence against immutable dependency/license policies. Implementation, deployment evidence and reviewer portal are being completed.
+GenLayer verification of locked open-source license policies against immutable release evidence. See contracts/licenselens.py and tests/test_contract.py. Synthetic demos are in evidence/. Deployment and reviewer website details are being finalized.

@@ -1,0 +1,19 @@
+{
+  "schema": "licenselens/v1",
+  "synthetic": true,
+  "release_id": "demo-good",
+  "commit": "13329682578682e0932a166f56329e044a6c5abd",
+  "inventory_complete": true,
+  "inventory_method": "Synthetic lockfile enumerates the only runtime dependency; its package manifest declares zero dependencies. Binary build imports exactly this library.",
+  "dependencies": [
+    {
+      "name": "demo-core",
+      "version": "1.0.0",
+      "license": "MIT",
+      "license_text": "Copyright 2026 Synthetic Example. Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files to deal in the Software without restriction. The above copyright notice and this permission notice shall be included in all copies or substantial portions. THE SOFTWARE IS PROVIDED AS IS, WITHOUT WARRANTY OF ANY KIND.",
+      "notice": "Copyright 2026 Synthetic Example. Full MIT permission and warranty text reproduced in NOTICES.txt.",
+      "integration": "Unmodified statically bundled library in a binary distribution.",
+      "obligation_evidence": "The distribution includes NOTICES.txt with the full copyright, permission and warranty text."
+    }
+  ]
+}

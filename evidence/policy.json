@@ -1,0 +1,10 @@
+{
+  "name": "Permissive-release",
+  "allowed_licenses": [
+    "MIT",
+    "Apache-2.0"
+  ],
+  "distribution": "BINARY",
+  "require_notice": true,
+  "requirements": "Preserve copyright, license and attribution in the shipped notices. Dependencies must have compatible license text and evidenced obligations."
+}
