@@ -1,0 +1,36 @@
+name: Release gate
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/genvm-linter
+            ~/.cache/gltest-direct
+          key: genvm-v0.2.16
+      - run: pip install -r requirements-test.txt
+      - run: genvm-lint check contracts/licenselens.py
+      - name: Reuse the verified GenVM release archive for direct mode
+        run: |
+          mkdir -p ~/.cache/gltest-direct
+          cp ~/.cache/genvm-linter/genvm-universal-v0.2.16.tar.xz ~/.cache/gltest-direct/
+      - run: pytest -q tests --tb=short
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - run: npm ci --prefix web --no-audit --no-fund
+      - run: npm run check --prefix web && npm test --prefix web && npm run build --prefix web
+      - run: python scripts/release_check.py

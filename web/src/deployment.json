@@ -1,0 +1,32 @@
+{
+  "network": "Studionet",
+  "chainId": 61999,
+  "rpc": "https://studio.genlayer.com/api",
+  "explorer": "https://explorer-studio.genlayer.com",
+  "address": "0x5c855B05FB2A843485CC54A3Ed8A407d6Ca4d074",
+  "deploymentTransaction": "0xad62309d1a7f24cd3568ab2a84251043cdb28c20147a0b5aa9b2bd9b6cf84809",
+  "sourceSha256": "b2f21eb84f6e17cca16ed04d4e1dd227e88aa00c4b5e74c6c3710f1434347934",
+  "website": "https://licenselens.ansaf1st34.chatgpt.site",
+  "transactions": [
+    {
+      "label": "Lock policy",
+      "hash": "0xb5cca13bac43c2c5ed1e5a4e3440598154b81b717926f9ee72c008e042aa76ed"
+    },
+    {
+      "label": "Submit compliant",
+      "hash": "0xdb94ac66b605d2885d75bc308ab4743c19b257bc2aca925718c5e1f5bed38864"
+    },
+    {
+      "label": "Review compliant",
+      "hash": "0x5fd917699ebb74546f356f0b52c0c7da9d0f3718d90b9251a646f8a5a162d7b0"
+    },
+    {
+      "label": "Submit non-compliant",
+      "hash": "0xdfdd8e6ecda4eb6b4206106f6191e87990cc2e05de786736e7aa35657efbbb52"
+    },
+    {
+      "label": "Independent non-compliant review",
+      "hash": "0x18e8d8f639452d0c9962f2754f4ff597548c038280f751a18b2b6453892556f4"
+    }
+  ]
+}
