@@ -34,4 +34,8 @@ Public immutable fixture commit: `6ddedc0616503ef6ab6cf400307eb1f4eeb51e73`. The
 
 45 direct-mode contract/security tests and 7 frontend safety tests. GenVM lint and SDK validation, TypeScript checks, production build and credential/unfinished-work scan are part of the release gate. Dependency audit reports zero known vulnerabilities after patching the affected Vite/viem dependencies. Live finalized reads and evidence SHA-256 checks pass. GitHub Actions runs the offline gate.
 
-Visual browser QA of the Sites website is unavailable in this environment because its supported preview browser skill is not installed. The website is validated with TypeScript, safety tests, production build, public HTTP asset checks and live RPC reads. Real MetaMask signing is not exercised in this cloud browser; EIP-1193 account-only connection is tested with a provider spy, and Studio built-in-account writes demonstrate the contract lifecycle.
+Visual browser QA of the Sites website is unavailable in this environment because its supported preview browser skill is not installed. The website is validated with TypeScript, safety tests, production build, confirmed public Sites publication and live RPC reads. Real MetaMask signing is not exercised in this cloud browser; EIP-1193 account-only connection is tested with a provider spy, and Studio built-in-account writes demonstrate the contract lifecycle.
+
+## Final verification note
+
+The public hosting service confirms the site is active at the documented URL with public access. Direct HTTP inspection from this execution environment receives Cloudflare error 1010, so published asset-byte inspection and visual browser QA cannot be claimed. The finalized on-chain state and exact source readback were reverified on 2026-10-13. CI setup explicitly downloads GenVM v0.2.16 before archive reuse; this corrects the initial missing-archive failure without changing or redeploying the contract.
