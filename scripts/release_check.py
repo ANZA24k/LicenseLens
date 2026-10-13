@@ -21,7 +21,7 @@ paths = [ROOT/'README.md', ROOT/'LICENSE', ROOT/'.gitignore', ROOT/'requirements
 for directory in ['contracts','tests','docs','evidence','scripts','web/src','web/tests','web/public','.github']:
     paths.extend(p for p in (ROOT/directory).rglob('*') if p.is_file() and '__pycache__' not in str(p))
 for p in paths:
-    text=p.read_text()
+    text=p.read_bytes().decode('utf-8',errors='ignore')
     assert not re.search(r'\bTODO\b|\bFIXME\b',text),f'Unfinished work in {p}'
     for pattern in patterns:
         assert not re.search(pattern,text),f'Possible credential in {p}'

@@ -4,6 +4,13 @@ import { TransactionHashVariant } from 'genlayer-js/types';
 import deployment from './deployment.json';
 import { escapeHTML as e, connectWallet, validateCommitments, verdictLabel, safeEvidenceURL } from './safety.mjs';
 import './style.css';
+import { mountParticleDrift } from './particle-background';
+const background = document.createElement('div');
+background.className = 'project-background';
+background.setAttribute('aria-hidden', 'true');
+background.innerHTML = '<div class="project-background-image"></div><div class="project-background-wash"></div><canvas></canvas>';
+document.body.prepend(background);
+mountParticleDrift(background);
 
 type Provider = {request:(args:{method:string;params?:unknown[]})=>Promise<any>;on?:(event:string,fn:(arg:any)=>void)=>void};
 declare global { interface Window { ethereum?: Provider } }
