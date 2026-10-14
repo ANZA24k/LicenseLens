@@ -1,0 +1,39 @@
+{
+  "schema": "licenselens/v2",
+  "synthetic": true,
+  "release_id": "agpl-complete",
+  "commit": "649c28792f96a077deca83ed0771f1352443d9bf",
+  "inventory_complete": true,
+  "inventory_method": "Complete standalone Python source and manifest fetched from the release commit. Uses only the Python standard library; no external runtime or transitive dependencies. Python interpreter/OS are outside this declared source assessment.",
+  "source_refs": [
+    {
+      "kind": "MANIFEST",
+      "url": "https://raw.githubusercontent.com/ANZA24k/LicenseLens/649c28792f96a077deca83ed0771f1352443d9bf/examples/agpl_manifest.json",
+      "sha256": "6f785ce33e2cbdd5462912984cb8732466f372aeeda00a3e7ff7dfe3202bb2b4"
+    },
+    {
+      "kind": "SOURCE",
+      "url": "https://raw.githubusercontent.com/ANZA24k/LicenseLens/649c28792f96a077deca83ed0771f1352443d9bf/examples/agpl_tool.py",
+      "sha256": "f562f5615b6a3ec69fd4e057d58108e11134107e28f51da8e2c6d0fcc3c92262"
+    }
+  ],
+  "dependencies": [
+    {
+      "name": "agpl-tool",
+      "version": "1.0.0",
+      "license": "AGPL-3.0-only",
+      "license_text": "SPDX-License-Identifier: AGPL-3.0-only. Complete unabridged terms are fetched through license_ref.",
+      "license_ref": {
+        "url": "https://raw.githubusercontent.com/spdx/license-list-data/31ba1a50e5397e00a304dbadc76531740e89ee48/text/AGPL-3.0-only.txt",
+        "sha256": "d8a6cc31abc16b6748c7a21f21611f5a1ec33f67d22ca23d7da1c19b95496bee"
+      },
+      "source_ref": {
+        "url": "https://raw.githubusercontent.com/ANZA24k/LicenseLens/649c28792f96a077deca83ed0771f1352443d9bf/examples/agpl_tool.py",
+        "sha256": "f562f5615b6a3ec69fd4e057d58108e11134107e28f51da8e2c6d0fcc3c92262"
+      },
+      "notice": "Copyright 2026 LicenseLens contributors. AGPL-3.0-only complete license document is supplied with this source-distribution evidence.",
+      "integration": "Demonstration modified network service. Complete service code fetched independently.",
+      "obligation_evidence": "Complete corresponding source includes all code and run instructions, no installation or build step; no additional dependencies. Full license terms referenced by immutable SPDX commit and exact SHA-256. Every network user is prominently offered the exact source via homepage /source link implemented in the complete source."
+    }
+  ]
+}

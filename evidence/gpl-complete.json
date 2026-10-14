@@ -1,0 +1,39 @@
+{
+  "schema": "licenselens/v2",
+  "synthetic": true,
+  "release_id": "gpl-complete",
+  "commit": "649c28792f96a077deca83ed0771f1352443d9bf",
+  "inventory_complete": true,
+  "inventory_method": "Complete standalone Python source and manifest fetched from the release commit. Uses only the Python standard library; no external runtime or transitive dependencies. Python interpreter/OS are outside this declared source assessment.",
+  "source_refs": [
+    {
+      "kind": "MANIFEST",
+      "url": "https://raw.githubusercontent.com/ANZA24k/LicenseLens/649c28792f96a077deca83ed0771f1352443d9bf/examples/gpl_manifest.json",
+      "sha256": "e791385183897d859e7f804318627c192294a206c1fb2ee1d20f6b2569c094fb"
+    },
+    {
+      "kind": "SOURCE",
+      "url": "https://raw.githubusercontent.com/ANZA24k/LicenseLens/649c28792f96a077deca83ed0771f1352443d9bf/examples/gpl_tool.py",
+      "sha256": "afa2784d0aaabd45fb4bfd41661fbca576159b9e630c1b43db33f1cdc024cea1"
+    }
+  ],
+  "dependencies": [
+    {
+      "name": "gpl-tool",
+      "version": "1.0.0",
+      "license": "GPL-3.0-only",
+      "license_text": "SPDX-License-Identifier: GPL-3.0-only. Complete unabridged terms are fetched through license_ref.",
+      "license_ref": {
+        "url": "https://raw.githubusercontent.com/spdx/license-list-data/31ba1a50e5397e00a304dbadc76531740e89ee48/text/GPL-3.0-only.txt",
+        "sha256": "fb981668c18a279e285fc4d83fba1e836cc84dd4daa73c9697d3cfd2d8aca6e0"
+      },
+      "source_ref": {
+        "url": "https://raw.githubusercontent.com/ANZA24k/LicenseLens/649c28792f96a077deca83ed0771f1352443d9bf/examples/gpl_tool.py",
+        "sha256": "afa2784d0aaabd45fb4bfd41661fbca576159b9e630c1b43db33f1cdc024cea1"
+      },
+      "notice": "Copyright 2026 LicenseLens contributors. GPL-3.0-only complete license document is supplied with this source-distribution evidence.",
+      "integration": "Standalone complete source distribution.",
+      "obligation_evidence": "Complete corresponding source includes all code and run instructions, no installation or build step; no additional dependencies. Full license terms referenced by immutable SPDX commit and exact SHA-256."
+    }
+  ]
+}
