@@ -1,0 +1,9 @@
+{
+  "name": "gpl-tool",
+  "version": "1.0.0",
+  "license": "GPL-3.0-only",
+  "dependencies": {},
+  "distribution": "SOURCE",
+  "build": "No build step; execute the complete Python source.",
+  "network_source_offer": "The source is offered to users alongside the service."
+}

@@ -1,0 +1,9 @@
+{
+  "name": "agpl-tool",
+  "version": "1.0.0",
+  "license": "AGPL-3.0-only",
+  "dependencies": {},
+  "distribution": "SAAS",
+  "build": "No build step; execute the complete Python source.",
+  "network_source_offer": "Every homepage prominently links /source, serving the exact complete source file; Python 3 standard library, no build or dependencies."
+}
