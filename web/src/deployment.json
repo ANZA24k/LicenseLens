@@ -3,30 +3,135 @@
   "chainId": 61999,
   "rpc": "https://studio.genlayer.com/api",
   "explorer": "https://explorer-studio.genlayer.com",
-  "address": "0x5c855B05FB2A843485CC54A3Ed8A407d6Ca4d074",
-  "deploymentTransaction": "0xad62309d1a7f24cd3568ab2a84251043cdb28c20147a0b5aa9b2bd9b6cf84809",
-  "sourceSha256": "b2f21eb84f6e17cca16ed04d4e1dd227e88aa00c4b5e74c6c3710f1434347934",
+  "address": "0x54B5ae48f7b7010E09191C330f63fC45c2A495F2",
+  "deploymentTransaction": "0x69151a8f3642e3f4988b572c6ba14074f7d883dfa81dba7195d49dabc31a93ee",
+  "sourceSha256": "07dc75b86ffe78f00064d0848b44a48229695bda4f91e4c68283cfaa224444a3",
   "website": "https://licenselens.ansaf1st34.chatgpt.site",
   "transactions": [
     {
-      "label": "Lock policy",
-      "hash": "0xb5cca13bac43c2c5ed1e5a4e3440598154b81b717926f9ee72c008e042aa76ed"
+      "label": "Lock source policy",
+      "hash": "0xb8cb8db2773734f547cf289116c132bc70d038e02ead1cc299f007c91bef566b",
+      "expectedExecution": "SUCCESS"
     },
     {
-      "label": "Submit compliant",
-      "hash": "0xdb94ac66b605d2885d75bc308ab4743c19b257bc2aca925718c5e1f5bed38864"
+      "label": "Submit real clsx source",
+      "hash": "0xb8e64a2248c381d7cf39c74996441befddae49a13bf6e172c63b804936a43008",
+      "expectedExecution": "SUCCESS"
     },
     {
-      "label": "Review compliant",
-      "hash": "0x5fd917699ebb74546f356f0b52c0c7da9d0f3718d90b9251a646f8a5a162d7b0"
+      "label": "Evaluate real clsx source",
+      "hash": "0xca39c7350cea991021d71757edefd82f63b53132bc7fbd4b436bff1dbcbbd977",
+      "expectedExecution": "SUCCESS"
     },
     {
-      "label": "Submit non-compliant",
-      "hash": "0xdfdd8e6ecda4eb6b4206106f6191e87990cc2e05de786736e7aa35657efbbb52"
+      "label": "Submit complete GPL evidence",
+      "hash": "0x535d230375c9bac16933794a46e2379f40544e6092550cb132cc05d4b3981edd",
+      "expectedExecution": "SUCCESS"
     },
     {
-      "label": "Independent non-compliant review",
-      "hash": "0x18e8d8f639452d0c9962f2754f4ff597548c038280f751a18b2b6453892556f4"
+      "label": "Evaluate complete GPL evidence",
+      "hash": "0xa40fed70f5c5cf272350a5edb9dc33dd39b5272a7f1e39d96ae85b748bc83b5a",
+      "expectedExecution": "SUCCESS"
+    },
+    {
+      "label": "Lock AGPL network policy",
+      "hash": "0x517b1feaa2315da95f82462541371b8e22e76cf5ed7a14554866e5708151a138",
+      "expectedExecution": "SUCCESS"
+    },
+    {
+      "label": "Submit complete AGPL evidence",
+      "hash": "0x4e3c2f129a834fc299660b51e0d3c7f9b372c4fa64dfe2f5880cbd865b2d9f02",
+      "expectedExecution": "SUCCESS"
+    },
+    {
+      "label": "Evaluate complete AGPL evidence",
+      "hash": "0x84fc773ac3cfbce0bf917ad826cbdd8993d3d100cd4a1728c572496003952bf4",
+      "expectedExecution": "SUCCESS"
+    },
+    {
+      "label": "Duplicate release rejected",
+      "hash": "0x6a00c9e6ca555852cb4f990bd001e402e33fd00d3d338cf8d38f0df3eb1cbd82",
+      "expectedExecution": "ERROR",
+      "expectedError": "Duplicate release"
+    },
+    {
+      "label": "Unauthorized release rejected",
+      "hash": "0x04725c0ce5a8492da5b02ac476d2f83c7fd93dfde1ed0e32e368d09850df05f7",
+      "expectedExecution": "ERROR",
+      "expectedError": "Only policy owner"
+    },
+    {
+      "label": "Global reservation overflow rejected",
+      "hash": "0x2935d50a8b556443b488b62ae6ec05f356e56905617c4444f80cbff01d859d48",
+      "expectedExecution": "ERROR",
+      "expectedError": "Global reservation"
+    },
+    {
+      "label": "Submit revision boundary fixture",
+      "hash": "0xe9a23b085300b0e0ee56ddff178962b189fad98e2728f4607e7fd974d8f9e693",
+      "expectedExecution": "SUCCESS"
+    },
+    {
+      "label": "Reserve separate actor capacity",
+      "hash": "0x49c254da0087a3e55bfe4c929b5e55d928d70c60f1db29accdf86332c0842f59",
+      "expectedExecution": "SUCCESS"
+    },
+    {
+      "label": "Review revision one",
+      "hash": "0x62d07c1ecaaebf44c6c22bebf0f9a244f059fb7e299d74fba884d4454b4c4365",
+      "expectedExecution": "SUCCESS"
+    },
+    {
+      "label": "Commit revision two",
+      "hash": "0xa50725c9e16115e4dd93e6082aaae094229485547f951303eecf7e13895de573",
+      "expectedExecution": "SUCCESS"
+    },
+    {
+      "label": "Review revision two",
+      "hash": "0x161b1fb2a07c6f8f9fae85b7a28462440fb0b7c13505ac7b48e9fa62bc0fe766",
+      "expectedExecution": "SUCCESS"
+    },
+    {
+      "label": "Commit revision three",
+      "hash": "0x4a64a0b542d0e9449e2b0edfa1fbb59f3e97ae57c6c44076ca0932de854cb260",
+      "expectedExecution": "SUCCESS"
+    },
+    {
+      "label": "Review revision three",
+      "hash": "0x8c92cb3586783b75a7fbda963d80506b62f2a1a74fe653e751f3e1be6554253d",
+      "expectedExecution": "SUCCESS"
+    },
+    {
+      "label": "Fourth revision rejected",
+      "hash": "0x2fe871aef52b398157c5a186a095cc24e8e8c46c87afb04813de5da43f4b082b",
+      "expectedExecution": "ERROR",
+      "expectedError": "revision limit reached"
+    },
+    {
+      "label": "Submit missing-notice comparison",
+      "hash": "0xde9dee8f4c53fb6630681ea0808331fb70a3d6095a440c45a5bb5fd6e3ad2fcf",
+      "expectedExecution": "SUCCESS"
+    },
+    {
+      "label": "Temporary model failure / no revision consumed",
+      "hash": "0x80c52b369598bc7393c91cc7fcb0fae052cac85d2b45341c4ceb42c1f3d8ec97",
+      "expectedExecution": "ERROR",
+      "expectedError": "Temporary failure",
+      "expectedConsensus": "MAJORITY_DISAGREE"
+    },
+    {
+      "label": "Separate-account recovered missing-notice review",
+      "hash": "0x5bc3ee09043ca6c6734d082ca4e25c80941db5d812971d7892dbe0ad055795ec",
+      "expectedExecution": "SUCCESS"
     }
-  ]
+  ],
+  "version": 2,
+  "evidenceCommit": "e6f609b0db434650f5fcbabfd848dddf8a0fe41d",
+  "expectedVerdicts": {
+    "clsx-2.1.1-source": "COMPLIANT",
+    "gpl-complete": "COMPLIANT",
+    "agpl-complete": "COMPLIANT",
+    "revision-boundary": "INCONCLUSIVE",
+    "demo-bad": "NON_COMPLIANT"
+  }
 }

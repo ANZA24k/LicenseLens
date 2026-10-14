@@ -1,0 +1,9 @@
+{
+  "url": "https://licenselens.ansaf1st34.chatgpt.site",
+  "status": "succeeded",
+  "version": 4,
+  "sourceCommit": "ae8570db91663e3e981b82a363029531f3c5bd91",
+  "archiveSha256": "sha256:a0690e8e6976504010be657ba611abbf33b86a1d3057ca88acf0428883906a6b",
+  "verifiedInputsMatch": true,
+  "browserQALimit": "Supported Sites preview browser skill unavailable; visual QA and real MetaMask signing not exercised."
+}

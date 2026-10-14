@@ -1,0 +1,18 @@
+import {test} from 'node:test';import assert from 'node:assert/strict';
+import {assertExecutionSuccess,verifyFinalizedWrite} from '../src/write-verification.mjs';
+const account='0x'+'1'.repeat(40);const receipt=(execution='SUCCESS',detail='')=>({result_name:'MAJORITY_AGREE',consensus_data:{leader_receipt:[{mode:'leader',execution_result:execution,genvm_result:{error_description:detail}}]}});
+const base={release_id:'r',policy_id:'p',commit:'c',url:'u',sha256:'h',owner:account,revision:1,history:[]};
+const options=(state,r=receipt())=>({client:{waitForTransactionReceipt:async()=>r},hash:'tx',method:'submit_release',args:['p','r','c','u','h'],account,read:async()=>state});
+test('successful finalized submission is confirmed through a fresh read',async()=>{assert.equal(await verifyFinalizedWrite(options(base)),base);});
+for(const error of ['Only policy owner can submit','Duplicate release or capacity reached','Temporary failure: retry same committed evidence','GenVM runtime error'])test('finalized failure displays '+error,async()=>{let reads=0;const o=options(base,receipt('ERROR',error));o.read=async()=>{reads++;return base};await assert.rejects(verifyFinalizedWrite(o),new RegExp(error));assert.equal(reads,0);});
+test('missing GenVM receipt never reports completion',()=>{assert.throws(()=>assertExecutionSuccess({}),/unsuccessful/);});
+test('execution success with missing expected state change fails',async()=>{await assert.rejects(verifyFinalizedWrite(options({...base,commit:'wrong'})),/does not match/);});
+test('evaluation requires exactly one matching finalized history entry',async()=>{const before={...base};const state={...base,history:[{revision:1,sha256:'h',reviewer:account,result:{verdict:'COMPLIANT'}}]};assert.equal(await verifyFinalizedWrite({...options(state),method:'evaluate',args:['r'],before}),state);await assert.rejects(verifyFinalizedWrite({...options(before),method:'evaluate',args:['r'],before}),/No matching/);});
+test('revision cannot rewrite prior history',async()=>{const before={...base,history:[{revision:1}]};await assert.rejects(verifyFinalizedWrite({...options({...base,revision:2,url:'u2',sha256:'h2',history:[]}),method:'revise_evidence',args:['r','u2','h2'],before}),/append-only/);});
+test('policy success requires locked contents and owner',async()=>{const policy={name:'policy',allowed_licenses:['MIT'],distribution:'SOURCE',require_notice:true,requirements:'Retain notices'};const state={id:'p',owner:account,policy};assert.equal(await verifyFinalizedWrite({...options(state),method:'create_policy',args:['p',JSON.stringify(policy)]}),state);});
+
+test('cancelled validator after quorum is not a failed leader write',()=>{const r=receipt();r.consensus_data.leader_receipt.push({mode:'validator',execution_result:'ERROR',genvm_result:{stderr:'Validator execution cancelled after quorum'}});assert.doesNotThrow(()=>assertExecutionSuccess(r));});
+test('successful validator cannot hide failed leader',()=>{const r=receipt('ERROR','Only policy owner can submit');r.consensus_data.leader_receipt.push({mode:'validator',execution_result:'SUCCESS'});assert.throws(()=>assertExecutionSuccess(r),/Only policy owner/);});
+
+test('leader execution success without accepting consensus never reports completion',async()=>{let reads=0;const r=receipt();r.result_name='MAJORITY_DISAGREE';const o=options(base,r);o.read=async()=>{reads++;return base};await assert.rejects(verifyFinalizedWrite(o),/without accepting consensus/);assert.equal(reads,0);});
+test('submission confirms the exact release identifier',async()=>{await assert.rejects(verifyFinalizedWrite(options({...base,release_id:'other'})),/does not match/);});

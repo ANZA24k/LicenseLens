@@ -1,0 +1,53 @@
+{
+  "failedTransaction": "0x80c52b369598bc7393c91cc7fcb0fae052cac85d2b45341c4ceb42c1f3d8ec97",
+  "before": {
+    "commit": "13329682578682e0932a166f56329e044a6c5abd",
+    "history": [],
+    "owner": "0x18cf600468784696cb4391b31ae9d7eb67c64967",
+    "policy_id": "source-policy",
+    "release_id": "demo-bad",
+    "revision": 1,
+    "sha256": "4b9152e0ecb518a0d83887fef666c39d084ad643ea0fc0853be351437c589efc",
+    "url": "https://raw.githubusercontent.com/ANZA24k/LicenseLens/6ddedc0616503ef6ab6cf400307eb1f4eeb51e73/evidence/noncompliant.json"
+  },
+  "verifiedAt": "2026-10-14T13:30:01.729Z",
+  "after": {
+    "commit": "13329682578682e0932a166f56329e044a6c5abd",
+    "history": [
+      {
+        "result": {
+          "error": "",
+          "evidence_sha256": "4b9152e0ecb518a0d83887fef666c39d084ad643ea0fc0853be351437c589efc",
+          "findings": [
+            {
+              "codes": [
+                "NOTICE_MISSING",
+                "OBLIGATIONS_UNMET"
+              ],
+              "id": "demo-core@1.0.0",
+              "license": "MIT",
+              "license_match": "SATISFIED",
+              "obligations": "VIOLATED"
+            }
+          ],
+          "inventory": "SATISFIED",
+          "scope": "SUBMITTED_EVIDENCE_ONLY",
+          "source_backed": false,
+          "synthetic": true,
+          "verdict": "NON_COMPLIANT"
+        },
+        "reviewer": "0xbf3c5761c9859137138e3bbfbe003a7f5d1cdab1",
+        "revision": 1,
+        "sha256": "4b9152e0ecb518a0d83887fef666c39d084ad643ea0fc0853be351437c589efc",
+        "url": "https://raw.githubusercontent.com/ANZA24k/LicenseLens/6ddedc0616503ef6ab6cf400307eb1f4eeb51e73/evidence/noncompliant.json"
+      }
+    ],
+    "owner": "0x18cf600468784696cb4391b31ae9d7eb67c64967",
+    "policy_id": "source-policy",
+    "release_id": "demo-bad",
+    "revision": 1,
+    "sha256": "4b9152e0ecb518a0d83887fef666c39d084ad643ea0fc0853be351437c589efc",
+    "url": "https://raw.githubusercontent.com/ANZA24k/LicenseLens/6ddedc0616503ef6ab6cf400307eb1f4eeb51e73/evidence/noncompliant.json"
+  },
+  "recoveryTransaction": "0x5bc3ee09043ca6c6734d082ca4e25c80941db5d812971d7892dbe0ad055795ec"
+}

@@ -3,6 +3,7 @@ import hashlib
 import json
 from pathlib import Path
 import pytest
+import re
 from gltest.direct import VMContext, deploy_contract
 
 PATH = Path(__file__).parents[1] / 'contracts/licenselens.py'
@@ -20,6 +21,7 @@ def digest(x): return hashlib.sha256(x.encode()).hexdigest()
 def env():
     vm = VMContext()
     with vm.activate():
+        vm.sender = '0x'+'a'*40
         c = deploy_contract(PATH, vm, sdk_version="v0.2.16")
         c.create_policy('demo-policy', encode(POLICY))
         yield vm, c
@@ -27,7 +29,7 @@ def env():
 def prepare(vm, c, bundle=None, answer=None, raw=None, status=200, expected_hash=None):
     raw = raw if raw is not None else encode(bundle or BUNDLE)
     c.submit_release('demo-policy', 'demo-good', COMMIT, URL, expected_hash or digest(raw))
-    vm.mock_web('raw.githubusercontent.com', {'status': status, 'body': raw})
+    vm.mock_web(re.escape(URL), {'status': status, 'body': raw})
     vm.mock_llm('open-source release evidence reviewer', encode(answer or ANSWER))
 
 def result(c): return json.loads(c.get_release('demo-good'))['history'][-1]['result']
@@ -72,7 +74,9 @@ def test_bad_evidence(env,mutation):
 
 @pytest.mark.parametrize('answer', [{}, {'inventory':'SATISFIED','dependencies':[]}, {'inventory':'APPROVE','dependencies':ANSWER['dependencies']}, {'inventory':'SATISFIED','dependencies':[{'id':'fake@1','license_match':'SATISFIED','obligations':'SATISFIED'}]}])
 def test_bad_judgment(env,answer):
-    vm,c=env;prepare(vm,c,answer=answer if answer else {'bad':1});c.evaluate('demo-good');assert result(c)['error']=='INVALID_JUDGMENT'
+    vm,c=env;prepare(vm,c,answer=answer if answer else {'bad':1})
+    with vm.expect_revert('Temporary failure'): c.evaluate('demo-good')
+    assert json.loads(c.get_release('demo-good'))['history']==[]
 
 def test_validator_rejects_disagreement_and_forgery(env):
     vm,c=env;prepare(vm,c);c.evaluate('demo-good');assert not vm.run_validator(leader_result={'verdict':'COMPLIANT'})

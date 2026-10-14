@@ -1,0 +1,17 @@
+[
+  {
+    "kind": "MANIFEST",
+    "url": "https://raw.githubusercontent.com/lukeed/clsx/925494cf31bcd97d3337aacd34e659e80cae7fe2/package.json",
+    "sha256": "a5e616b9883177fb47c1fca22b6a4ab42be1c3ed6ffae8595a5c7d88630eeec2"
+  },
+  {
+    "kind": "NOTICE",
+    "url": "https://raw.githubusercontent.com/lukeed/clsx/925494cf31bcd97d3337aacd34e659e80cae7fe2/license",
+    "sha256": "9a9edad7baae52622bddf3c15b2ef8a33d2c89f2d25408ad13e8a7481c6b0c97"
+  },
+  {
+    "kind": "SOURCE",
+    "url": "https://raw.githubusercontent.com/lukeed/clsx/925494cf31bcd97d3337aacd34e659e80cae7fe2/src/index.js",
+    "sha256": "a577c500f65ed167cea489dd39c149c36880f959fc6ca24e4e1cc545cb7a53e1"
+  }
+]

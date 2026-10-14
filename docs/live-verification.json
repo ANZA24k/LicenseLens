@@ -1,59 +1,187 @@
 {
-  "verified_at": "2026-10-13T02:22:54.889Z",
+  "verified_at": "2026-10-14T13:34:23.619Z",
   "source_match": true,
-  "source_sha256": "b2f21eb84f6e17cca16ed04d4e1dd227e88aa00c4b5e74c6c3710f1434347934",
+  "source_sha256": "07dc75b86ffe78f00064d0848b44a48229695bda4f91e4c68283cfaa224444a3",
   "network": "Studionet",
-  "address": "0x5c855B05FB2A843485CC54A3Ed8A407d6Ca4d074",
+  "address": "0x54B5ae48f7b7010E09191C330f63fC45c2A495F2",
   "policies": [
     {
-      "id": "demo-policy",
-      "owner": "0xFE858F4f7b3F0Fff7947F40f83F0CF3b626fF580",
+      "id": "source-policy",
+      "owner": "0x18cf600468784696cb4391b31ae9d7eb67c64967",
       "policy": {
         "allowed_licenses": [
-          "Apache-2.0",
+          "AGPL-3.0-only",
+          "GPL-3.0-only",
           "MIT"
         ],
-        "distribution": "BINARY",
-        "name": "Permissive-release",
+        "distribution": "SOURCE",
+        "name": "Source-snapshot",
         "require_notice": true,
-        "requirements": "Preserve copyright, license and attribution in the shipped notices. Dependencies must have compatible license text and evidenced obligations."
+        "requirements": "Assess submitted evidence of the committed runtime source snapshot only. Preserve full license and copyright notices. Require complete corresponding source with run/build instructions for copyleft. Exclude development tooling, interpreter, OS, published archives and binary build outputs; do not authenticate an entire software release."
       },
-      "sha256": "8063d2b439299b0b72113be85259d176ea15ddb0302fd869d4b1257567a7390b"
+      "sha256": "c1e00d58634917197aa6d29be02854a9c5ae1c8644e89feca66df4fcb7bf086c"
+    },
+    {
+      "id": "network-policy",
+      "owner": "0x18cf600468784696cb4391b31ae9d7eb67c64967",
+      "policy": {
+        "allowed_licenses": [
+          "AGPL-3.0-only"
+        ],
+        "distribution": "SAAS",
+        "name": "Network-service",
+        "require_notice": true,
+        "requirements": "Assess submitted evidence of this demonstration AGPL network service. Preserve copyright and complete license terms. Require complete corresponding source, run/build instructions and a prominent source offer accessible to every remote user. This verdict assesses evidence, not an authenticated deployed service."
+      },
+      "sha256": "83083f847e64dd45743abe18a4e598eeb21a3ca856ad51bafff08296034fa36a"
     }
   ],
   "releases": [
     {
-      "commit": "13329682578682e0932a166f56329e044a6c5abd",
+      "commit": "925494cf31bcd97d3337aacd34e659e80cae7fe2",
       "history": [
         {
           "result": {
             "error": "",
-            "evidence_sha256": "7bd3ae9264af68504681604c8459b58ce0580574cacd2881f346ff0cb3b40545",
+            "evidence_sha256": "318fe625157fac23336e4951b97940959f2bec2d770a3c8dde66c9af6dc20853",
             "findings": [
               {
                 "codes": [],
-                "id": "demo-core@1.0.0",
+                "id": "clsx@2.1.1",
                 "license": "MIT",
                 "license_match": "SATISFIED",
                 "obligations": "SATISFIED"
               }
             ],
             "inventory": "SATISFIED",
+            "scope": "SUBMITTED_EVIDENCE_ONLY",
+            "source_backed": true,
+            "synthetic": false,
+            "verdict": "COMPLIANT"
+          },
+          "reviewer": "0x18cf600468784696cb4391b31ae9d7eb67c64967",
+          "revision": 1,
+          "sha256": "318fe625157fac23336e4951b97940959f2bec2d770a3c8dde66c9af6dc20853",
+          "url": "https://raw.githubusercontent.com/ANZA24k/LicenseLens/e6f609b0db434650f5fcbabfd848dddf8a0fe41d/evidence/clsx-source.json"
+        }
+      ],
+      "owner": "0x18cf600468784696cb4391b31ae9d7eb67c64967",
+      "policy_id": "source-policy",
+      "release_id": "clsx-2.1.1-source",
+      "revision": 1,
+      "sha256": "318fe625157fac23336e4951b97940959f2bec2d770a3c8dde66c9af6dc20853",
+      "url": "https://raw.githubusercontent.com/ANZA24k/LicenseLens/e6f609b0db434650f5fcbabfd848dddf8a0fe41d/evidence/clsx-source.json"
+    },
+    {
+      "commit": "649c28792f96a077deca83ed0771f1352443d9bf",
+      "history": [
+        {
+          "result": {
+            "error": "",
+            "evidence_sha256": "28726a4603dea2ca6ded054ee0eb78b880d7665fa8f0d33430ff1eb05f8d510c",
+            "findings": [
+              {
+                "codes": [],
+                "id": "gpl-tool@1.0.0",
+                "license": "GPL-3.0-only",
+                "license_match": "SATISFIED",
+                "obligations": "SATISFIED"
+              }
+            ],
+            "inventory": "SATISFIED",
+            "scope": "SUBMITTED_EVIDENCE_ONLY",
+            "source_backed": true,
             "synthetic": true,
             "verdict": "COMPLIANT"
           },
-          "reviewer": "0xFE858F4f7b3F0Fff7947F40f83F0CF3b626fF580",
+          "reviewer": "0x18cf600468784696cb4391b31ae9d7eb67c64967",
           "revision": 1,
-          "sha256": "7bd3ae9264af68504681604c8459b58ce0580574cacd2881f346ff0cb3b40545",
-          "url": "https://raw.githubusercontent.com/ANZA24k/LicenseLens/6ddedc0616503ef6ab6cf400307eb1f4eeb51e73/evidence/compliant.json"
+          "sha256": "28726a4603dea2ca6ded054ee0eb78b880d7665fa8f0d33430ff1eb05f8d510c",
+          "url": "https://raw.githubusercontent.com/ANZA24k/LicenseLens/e6f609b0db434650f5fcbabfd848dddf8a0fe41d/evidence/gpl-complete.json"
         }
       ],
-      "owner": "0xFE858F4f7b3F0Fff7947F40f83F0CF3b626fF580",
-      "policy_id": "demo-policy",
-      "release_id": "demo-good",
+      "owner": "0x18cf600468784696cb4391b31ae9d7eb67c64967",
+      "policy_id": "source-policy",
+      "release_id": "gpl-complete",
       "revision": 1,
-      "sha256": "7bd3ae9264af68504681604c8459b58ce0580574cacd2881f346ff0cb3b40545",
-      "url": "https://raw.githubusercontent.com/ANZA24k/LicenseLens/6ddedc0616503ef6ab6cf400307eb1f4eeb51e73/evidence/compliant.json"
+      "sha256": "28726a4603dea2ca6ded054ee0eb78b880d7665fa8f0d33430ff1eb05f8d510c",
+      "url": "https://raw.githubusercontent.com/ANZA24k/LicenseLens/e6f609b0db434650f5fcbabfd848dddf8a0fe41d/evidence/gpl-complete.json"
+    },
+    {
+      "commit": "649c28792f96a077deca83ed0771f1352443d9bf",
+      "history": [
+        {
+          "result": {
+            "error": "",
+            "evidence_sha256": "a0ef2ca91faace454a0daac588c450b80bad2d12f4d1625fd76be3367348d667",
+            "findings": [
+              {
+                "codes": [],
+                "id": "agpl-tool@1.0.0",
+                "license": "AGPL-3.0-only",
+                "license_match": "SATISFIED",
+                "obligations": "SATISFIED"
+              }
+            ],
+            "inventory": "SATISFIED",
+            "scope": "SUBMITTED_EVIDENCE_ONLY",
+            "source_backed": true,
+            "synthetic": true,
+            "verdict": "COMPLIANT"
+          },
+          "reviewer": "0x18cf600468784696cb4391b31ae9d7eb67c64967",
+          "revision": 1,
+          "sha256": "a0ef2ca91faace454a0daac588c450b80bad2d12f4d1625fd76be3367348d667",
+          "url": "https://raw.githubusercontent.com/ANZA24k/LicenseLens/e6f609b0db434650f5fcbabfd848dddf8a0fe41d/evidence/agpl-complete.json"
+        }
+      ],
+      "owner": "0x18cf600468784696cb4391b31ae9d7eb67c64967",
+      "policy_id": "network-policy",
+      "release_id": "agpl-complete",
+      "revision": 1,
+      "sha256": "a0ef2ca91faace454a0daac588c450b80bad2d12f4d1625fd76be3367348d667",
+      "url": "https://raw.githubusercontent.com/ANZA24k/LicenseLens/e6f609b0db434650f5fcbabfd848dddf8a0fe41d/evidence/agpl-complete.json"
+    },
+    {
+      "commit": "649c28792f96a077deca83ed0771f1352443d9bf",
+      "history": [
+        {
+          "result": {
+            "error": "HASH_MISMATCH",
+            "verdict": "INCONCLUSIVE"
+          },
+          "reviewer": "0x18cf600468784696cb4391b31ae9d7eb67c64967",
+          "revision": 1,
+          "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+          "url": "https://raw.githubusercontent.com/ANZA24k/LicenseLens/e6f609b0db434650f5fcbabfd848dddf8a0fe41d/evidence/clsx-source.json"
+        },
+        {
+          "result": {
+            "error": "HASH_MISMATCH",
+            "verdict": "INCONCLUSIVE"
+          },
+          "reviewer": "0x18cf600468784696cb4391b31ae9d7eb67c64967",
+          "revision": 2,
+          "sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+          "url": "https://raw.githubusercontent.com/ANZA24k/LicenseLens/e6f609b0db434650f5fcbabfd848dddf8a0fe41d/evidence/clsx-source.json"
+        },
+        {
+          "result": {
+            "error": "HASH_MISMATCH",
+            "verdict": "INCONCLUSIVE"
+          },
+          "reviewer": "0x18cf600468784696cb4391b31ae9d7eb67c64967",
+          "revision": 3,
+          "sha256": "2222222222222222222222222222222222222222222222222222222222222222",
+          "url": "https://raw.githubusercontent.com/ANZA24k/LicenseLens/e6f609b0db434650f5fcbabfd848dddf8a0fe41d/evidence/clsx-source.json"
+        }
+      ],
+      "owner": "0x18cf600468784696cb4391b31ae9d7eb67c64967",
+      "policy_id": "source-policy",
+      "release_id": "revision-boundary",
+      "revision": 3,
+      "sha256": "2222222222222222222222222222222222222222222222222222222222222222",
+      "url": "https://raw.githubusercontent.com/ANZA24k/LicenseLens/e6f609b0db434650f5fcbabfd848dddf8a0fe41d/evidence/clsx-source.json"
     },
     {
       "commit": "13329682578682e0932a166f56329e044a6c5abd",
@@ -74,144 +202,451 @@
                 "obligations": "VIOLATED"
               }
             ],
-            "inventory": "VIOLATED",
+            "inventory": "SATISFIED",
+            "scope": "SUBMITTED_EVIDENCE_ONLY",
+            "source_backed": false,
             "synthetic": true,
             "verdict": "NON_COMPLIANT"
           },
-          "reviewer": "0x9e3CCf51f19057182D8cdbC16B6B87b4BfCEFF78",
+          "reviewer": "0xbf3c5761c9859137138e3bbfbe003a7f5d1cdab1",
           "revision": 1,
           "sha256": "4b9152e0ecb518a0d83887fef666c39d084ad643ea0fc0853be351437c589efc",
           "url": "https://raw.githubusercontent.com/ANZA24k/LicenseLens/6ddedc0616503ef6ab6cf400307eb1f4eeb51e73/evidence/noncompliant.json"
         }
       ],
-      "owner": "0xFE858F4f7b3F0Fff7947F40f83F0CF3b626fF580",
-      "policy_id": "demo-policy",
+      "owner": "0x18cf600468784696cb4391b31ae9d7eb67c64967",
+      "policy_id": "source-policy",
       "release_id": "demo-bad",
       "revision": 1,
       "sha256": "4b9152e0ecb518a0d83887fef666c39d084ad643ea0fc0853be351437c589efc",
       "url": "https://raw.githubusercontent.com/ANZA24k/LicenseLens/6ddedc0616503ef6ab6cf400307eb1f4eeb51e73/evidence/noncompliant.json"
     }
   ],
+  "capacity": {
+    "account": {
+      "policies": 0,
+      "releases": 0,
+      "used_policies": 0,
+      "used_releases": 0
+    },
+    "administrator": "0x18cf600468784696cb4391b31ae9d7eb67c64967",
+    "global_policies": 128,
+    "global_releases": 128,
+    "mode": "ADMITTED_DEMONSTRATION",
+    "reserved_policies": 5,
+    "reserved_releases": 9
+  },
   "transactions": [
     {
-      "hash": "0xad62309d1a7f24cd3568ab2a84251043cdb28c20147a0b5aa9b2bd9b6cf84809",
+      "hash": "0x69151a8f3642e3f4988b572c6ba14074f7d883dfa81dba7195d49dabc31a93ee",
+      "label": "Deploy V2",
       "status": "FINALIZED",
       "consensus_result": "MAJORITY_AGREE",
-      "validator_execution_results": [
-        "ERROR",
-        "SUCCESS",
-        "SUCCESS",
-        "SUCCESS"
-      ],
+      "execution_result": "SUCCESS",
+      "error": "null",
       "leader_only": false,
-      "rotations": 0,
       "votes": {
-        "0x03D58A4DeF6fDFc032A56374785a5F571D07Bc11": "agree",
-        "0x4EDbE1FC9EAeC7b0EBA849b0C76AE73Eb0ad5C47": "idle",
-        "0x9ea87b28DcA2F79fe108CF06a4c13B4c876AC23d": "idle",
-        "0xBBb165E4c9d73a1493D363280f7067Cd07891dBE": "agree",
-        "0xec2Fb79cd12255Eb34886CEd7332f27B98DEe658": "agree"
-      }
-    },
-    {
-      "hash": "0xb5cca13bac43c2c5ed1e5a4e3440598154b81b717926f9ee72c008e042aa76ed",
-      "status": "FINALIZED",
-      "consensus_result": "MAJORITY_AGREE",
-      "validator_execution_results": [
-        "SUCCESS",
-        "ERROR",
-        "ERROR",
-        "SUCCESS"
-      ],
-      "leader_only": false,
-      "rotations": 0,
-      "votes": {
-        "0x14402D49f317CE1a2F35BAE01b1804A2A9703dCb": "agree",
+        "0x36728d2a123aB444E603EE5b2ad17d18Bb193557": "idle",
+        "0x3D83ab507785b95ca5C208bEc80CCe3D5ca98100": "agree",
         "0x3E5ee2507cc167C9925Bf10c67D7986581112024": "agree",
-        "0x6737ca1d6BDF8b7C4f19143E2D55581Ca64eb7C3": "idle",
-        "0xacc2459F341D7a887bcA8FAA62F1EC9378d4Bc67": "idle",
-        "0xcE1d6bBB36B744536153966B4DD42276f5ADd0F8": "agree"
+        "0xE6BD8050758CB15fC88387223E31Ae2708B119dC": "agree",
+        "0xec2Fb79cd12255Eb34886CEd7332f27B98DEe658": "idle"
       }
     },
     {
-      "hash": "0xdb94ac66b605d2885d75bc308ab4743c19b257bc2aca925718c5e1f5bed38864",
+      "hash": "0xb8cb8db2773734f547cf289116c132bc70d038e02ead1cc299f007c91bef566b",
+      "label": "Lock source policy",
       "status": "FINALIZED",
       "consensus_result": "MAJORITY_AGREE",
-      "validator_execution_results": [
-        "SUCCESS",
-        "SUCCESS",
-        "SUCCESS",
-        "SUCCESS"
-      ],
+      "execution_result": "SUCCESS",
+      "error": "null",
       "leader_only": false,
-      "rotations": 0,
       "votes": {
         "0x03D58A4DeF6fDFc032A56374785a5F571D07Bc11": "agree",
-        "0x76c25AFC12c75485703cCFfd0083AA6201455B25": "agree",
-        "0x9ea87b28DcA2F79fe108CF06a4c13B4c876AC23d": "agree",
-        "0xE6BD8050758CB15fC88387223E31Ae2708B119dC": "agree",
+        "0x3E5ee2507cc167C9925Bf10c67D7986581112024": "agree",
+        "0x4404Fb70d490c935758146f42A73DC850FF95C71": "idle",
+        "0x4aba638Cf0Cf5249437AaD968fC69dde46ae6BAC": "agree",
+        "0x6737ca1d6BDF8b7C4f19143E2D55581Ca64eb7C3": "idle"
+      }
+    },
+    {
+      "hash": "0xb8e64a2248c381d7cf39c74996441befddae49a13bf6e172c63b804936a43008",
+      "label": "Submit real clsx source",
+      "status": "FINALIZED",
+      "consensus_result": "MAJORITY_AGREE",
+      "execution_result": "SUCCESS",
+      "error": "null",
+      "leader_only": false,
+      "votes": {
+        "0x36728d2a123aB444E603EE5b2ad17d18Bb193557": "agree",
+        "0x3D83ab507785b95ca5C208bEc80CCe3D5ca98100": "agree",
+        "0x4aba638Cf0Cf5249437AaD968fC69dde46ae6BAC": "agree",
+        "0x6737ca1d6BDF8b7C4f19143E2D55581Ca64eb7C3": "agree",
         "0xec2Fb79cd12255Eb34886CEd7332f27B98DEe658": "agree"
       }
     },
     {
-      "hash": "0x5fd917699ebb74546f356f0b52c0c7da9d0f3718d90b9251a646f8a5a162d7b0",
+      "hash": "0xca39c7350cea991021d71757edefd82f63b53132bc7fbd4b436bff1dbcbbd977",
+      "label": "Evaluate real clsx source",
       "status": "FINALIZED",
       "consensus_result": "MAJORITY_AGREE",
-      "validator_execution_results": [
-        "SUCCESS",
-        "SUCCESS",
-        "ERROR",
-        "SUCCESS"
-      ],
+      "execution_result": "SUCCESS",
+      "error": "null",
       "leader_only": false,
-      "rotations": 1,
-      "votes": {
-        "0x03D58A4DeF6fDFc032A56374785a5F571D07Bc11": "agree",
-        "0x5310dcF075E0BD47d29B8ec6581F736C767f54D2": "idle",
-        "0x9ea87b28DcA2F79fe108CF06a4c13B4c876AC23d": "idle",
-        "0xacc2459F341D7a887bcA8FAA62F1EC9378d4Bc67": "agree",
-        "0xcE1d6bBB36B744536153966B4DD42276f5ADd0F8": "agree"
-      }
-    },
-    {
-      "hash": "0xdfdd8e6ecda4eb6b4206106f6191e87990cc2e05de786736e7aa35657efbbb52",
-      "status": "FINALIZED",
-      "consensus_result": "MAJORITY_AGREE",
-      "validator_execution_results": [
-        "SUCCESS",
-        "SUCCESS",
-        "SUCCESS",
-        "SUCCESS"
-      ],
-      "leader_only": false,
-      "rotations": 0,
       "votes": {
         "0x14402D49f317CE1a2F35BAE01b1804A2A9703dCb": "agree",
-        "0x4404Fb70d490c935758146f42A73DC850FF95C71": "agree",
-        "0x772ffCd1dF6Cc566eC4b8d3f4F4f8eBbb6B36C84": "agree",
-        "0xBBb165E4c9d73a1493D363280f7067Cd07891dBE": "agree",
+        "0x3D83ab507785b95ca5C208bEc80CCe3D5ca98100": "idle",
+        "0x6737ca1d6BDF8b7C4f19143E2D55581Ca64eb7C3": "agree",
+        "0xBBb165E4c9d73a1493D363280f7067Cd07891dBE": "idle",
         "0xE6BD8050758CB15fC88387223E31Ae2708B119dC": "agree"
       }
     },
     {
-      "hash": "0x18e8d8f639452d0c9962f2754f4ff597548c038280f751a18b2b6453892556f4",
+      "hash": "0x535d230375c9bac16933794a46e2379f40544e6092550cb132cc05d4b3981edd",
+      "label": "Submit complete GPL evidence",
       "status": "FINALIZED",
       "consensus_result": "MAJORITY_AGREE",
-      "validator_execution_results": [
-        "SUCCESS",
-        "SUCCESS",
-        "SUCCESS",
-        "SUCCESS"
-      ],
+      "execution_result": "SUCCESS",
+      "error": "null",
       "leader_only": false,
-      "rotations": 0,
       "votes": {
-        "0x36728d2a123aB444E603EE5b2ad17d18Bb193557": "disagree",
+        "0x4aba638Cf0Cf5249437AaD968fC69dde46ae6BAC": "agree",
+        "0x772ffCd1dF6Cc566eC4b8d3f4F4f8eBbb6B36C84": "agree",
+        "0x90402341F0B0e97b23023c0a87de957FB7148E0F": "idle",
+        "0xDB1c35c1f05d885999b8f13e5735307BcC16Be88": "agree",
+        "0xcE1d6bBB36B744536153966B4DD42276f5ADd0F8": "idle"
+      }
+    },
+    {
+      "hash": "0xa40fed70f5c5cf272350a5edb9dc33dd39b5272a7f1e39d96ae85b748bc83b5a",
+      "label": "Evaluate complete GPL evidence",
+      "status": "FINALIZED",
+      "consensus_result": "MAJORITY_AGREE",
+      "execution_result": "SUCCESS",
+      "error": "null",
+      "leader_only": false,
+      "votes": {
+        "0x3D83ab507785b95ca5C208bEc80CCe3D5ca98100": "agree",
+        "0x4404Fb70d490c935758146f42A73DC850FF95C71": "agree",
+        "0x4EDbE1FC9EAeC7b0EBA849b0C76AE73Eb0ad5C47": "idle",
+        "0x772ffCd1dF6Cc566eC4b8d3f4F4f8eBbb6B36C84": "agree",
+        "0x90402341F0B0e97b23023c0a87de957FB7148E0F": "idle"
+      }
+    },
+    {
+      "hash": "0x517b1feaa2315da95f82462541371b8e22e76cf5ed7a14554866e5708151a138",
+      "label": "Lock AGPL network policy",
+      "status": "FINALIZED",
+      "consensus_result": "MAJORITY_AGREE",
+      "execution_result": "SUCCESS",
+      "error": "null",
+      "leader_only": false,
+      "votes": {
+        "0x3E5ee2507cc167C9925Bf10c67D7986581112024": "agree",
+        "0x4aba638Cf0Cf5249437AaD968fC69dde46ae6BAC": "agree",
         "0x5310dcF075E0BD47d29B8ec6581F736C767f54D2": "agree",
-        "0x90402341F0B0e97b23023c0a87de957FB7148E0F": "disagree",
-        "0xacc2459F341D7a887bcA8FAA62F1EC9378d4Bc67": "agree",
+        "0x90402341F0B0e97b23023c0a87de957FB7148E0F": "agree",
+        "0xE6BD8050758CB15fC88387223E31Ae2708B119dC": "agree"
+      }
+    },
+    {
+      "hash": "0x4e3c2f129a834fc299660b51e0d3c7f9b372c4fa64dfe2f5880cbd865b2d9f02",
+      "label": "Submit complete AGPL evidence",
+      "status": "FINALIZED",
+      "consensus_result": "MAJORITY_AGREE",
+      "execution_result": "SUCCESS",
+      "error": "null",
+      "leader_only": false,
+      "votes": {
+        "0x36728d2a123aB444E603EE5b2ad17d18Bb193557": "agree",
+        "0x4EDbE1FC9EAeC7b0EBA849b0C76AE73Eb0ad5C47": "agree",
+        "0x4aba638Cf0Cf5249437AaD968fC69dde46ae6BAC": "agree",
+        "0xBBb165E4c9d73a1493D363280f7067Cd07891dBE": "agree",
         "0xcE1d6bBB36B744536153966B4DD42276f5ADd0F8": "agree"
       }
+    },
+    {
+      "hash": "0x84fc773ac3cfbce0bf917ad826cbdd8993d3d100cd4a1728c572496003952bf4",
+      "label": "Evaluate complete AGPL evidence",
+      "status": "FINALIZED",
+      "consensus_result": "MAJORITY_AGREE",
+      "execution_result": "SUCCESS",
+      "error": "null",
+      "leader_only": false,
+      "votes": {
+        "0x14402D49f317CE1a2F35BAE01b1804A2A9703dCb": "idle",
+        "0x4404Fb70d490c935758146f42A73DC850FF95C71": "agree",
+        "0x4aba638Cf0Cf5249437AaD968fC69dde46ae6BAC": "idle",
+        "0x5310dcF075E0BD47d29B8ec6581F736C767f54D2": "agree",
+        "0x772ffCd1dF6Cc566eC4b8d3f4F4f8eBbb6B36C84": "agree"
+      }
+    },
+    {
+      "hash": "0x6a00c9e6ca555852cb4f990bd001e402e33fd00d3d338cf8d38f0df3eb1cbd82",
+      "label": "Duplicate release rejected",
+      "status": "FINALIZED",
+      "consensus_result": "MAJORITY_AGREE",
+      "execution_result": "ERROR",
+      "error": "",
+      "leader_only": false,
+      "votes": {
+        "0x14402D49f317CE1a2F35BAE01b1804A2A9703dCb": "agree",
+        "0x3D83ab507785b95ca5C208bEc80CCe3D5ca98100": "agree",
+        "0x4404Fb70d490c935758146f42A73DC850FF95C71": "idle",
+        "0x5310dcF075E0BD47d29B8ec6581F736C767f54D2": "idle",
+        "0x6737ca1d6BDF8b7C4f19143E2D55581Ca64eb7C3": "agree"
+      }
+    },
+    {
+      "hash": "0x04725c0ce5a8492da5b02ac476d2f83c7fd93dfde1ed0e32e368d09850df05f7",
+      "label": "Unauthorized release rejected",
+      "status": "FINALIZED",
+      "consensus_result": "MAJORITY_AGREE",
+      "execution_result": "ERROR",
+      "error": "",
+      "leader_only": false,
+      "votes": {
+        "0x3E5ee2507cc167C9925Bf10c67D7986581112024": "agree",
+        "0x4aba638Cf0Cf5249437AaD968fC69dde46ae6BAC": "agree",
+        "0x90402341F0B0e97b23023c0a87de957FB7148E0F": "agree",
+        "0xE6BD8050758CB15fC88387223E31Ae2708B119dC": "agree",
+        "0xacc2459F341D7a887bcA8FAA62F1EC9378d4Bc67": "agree"
+      }
+    },
+    {
+      "hash": "0x2935d50a8b556443b488b62ae6ec05f356e56905617c4444f80cbff01d859d48",
+      "label": "Global reservation overflow rejected",
+      "status": "FINALIZED",
+      "consensus_result": "MAJORITY_AGREE",
+      "execution_result": "ERROR",
+      "error": "",
+      "leader_only": false,
+      "votes": {
+        "0x03D58A4DeF6fDFc032A56374785a5F571D07Bc11": "agree",
+        "0x36728d2a123aB444E603EE5b2ad17d18Bb193557": "agree",
+        "0x3E5ee2507cc167C9925Bf10c67D7986581112024": "agree",
+        "0x4aba638Cf0Cf5249437AaD968fC69dde46ae6BAC": "agree",
+        "0xec2Fb79cd12255Eb34886CEd7332f27B98DEe658": "agree"
+      }
+    },
+    {
+      "hash": "0xe9a23b085300b0e0ee56ddff178962b189fad98e2728f4607e7fd974d8f9e693",
+      "label": "Submit revision boundary fixture",
+      "status": "FINALIZED",
+      "consensus_result": "MAJORITY_AGREE",
+      "execution_result": "SUCCESS",
+      "error": "null",
+      "leader_only": false,
+      "votes": {
+        "0x03D58A4DeF6fDFc032A56374785a5F571D07Bc11": "agree",
+        "0x5310dcF075E0BD47d29B8ec6581F736C767f54D2": "idle",
+        "0x76c25AFC12c75485703cCFfd0083AA6201455B25": "agree",
+        "0xBBb165E4c9d73a1493D363280f7067Cd07891dBE": "agree",
+        "0xacc2459F341D7a887bcA8FAA62F1EC9378d4Bc67": "idle"
+      }
+    },
+    {
+      "hash": "0x49c254da0087a3e55bfe4c929b5e55d928d70c60f1db29accdf86332c0842f59",
+      "label": "Reserve separate actor capacity",
+      "status": "FINALIZED",
+      "consensus_result": "MAJORITY_AGREE",
+      "execution_result": "SUCCESS",
+      "error": "null",
+      "leader_only": false,
+      "votes": {
+        "0x14402D49f317CE1a2F35BAE01b1804A2A9703dCb": "agree",
+        "0x3D83ab507785b95ca5C208bEc80CCe3D5ca98100": "agree",
+        "0x4404Fb70d490c935758146f42A73DC850FF95C71": "idle",
+        "0xDB1c35c1f05d885999b8f13e5735307BcC16Be88": "agree",
+        "0xE6BD8050758CB15fC88387223E31Ae2708B119dC": "idle"
+      }
+    },
+    {
+      "hash": "0x62d07c1ecaaebf44c6c22bebf0f9a244f059fb7e299d74fba884d4454b4c4365",
+      "label": "Review revision one",
+      "status": "FINALIZED",
+      "consensus_result": "MAJORITY_AGREE",
+      "execution_result": "SUCCESS",
+      "error": "null",
+      "leader_only": false,
+      "votes": {
+        "0x03D58A4DeF6fDFc032A56374785a5F571D07Bc11": "agree",
+        "0x3E5ee2507cc167C9925Bf10c67D7986581112024": "agree",
+        "0x76c25AFC12c75485703cCFfd0083AA6201455B25": "idle",
+        "0x772ffCd1dF6Cc566eC4b8d3f4F4f8eBbb6B36C84": "idle",
+        "0xec2Fb79cd12255Eb34886CEd7332f27B98DEe658": "agree"
+      }
+    },
+    {
+      "hash": "0xa50725c9e16115e4dd93e6082aaae094229485547f951303eecf7e13895de573",
+      "label": "Commit revision two",
+      "status": "FINALIZED",
+      "consensus_result": "MAJORITY_AGREE",
+      "execution_result": "SUCCESS",
+      "error": "null",
+      "leader_only": false,
+      "votes": {
+        "0x36728d2a123aB444E603EE5b2ad17d18Bb193557": "idle",
+        "0x3D83ab507785b95ca5C208bEc80CCe3D5ca98100": "agree",
+        "0x772ffCd1dF6Cc566eC4b8d3f4F4f8eBbb6B36C84": "idle",
+        "0xBBb165E4c9d73a1493D363280f7067Cd07891dBE": "agree",
+        "0xec2Fb79cd12255Eb34886CEd7332f27B98DEe658": "agree"
+      }
+    },
+    {
+      "hash": "0x161b1fb2a07c6f8f9fae85b7a28462440fb0b7c13505ac7b48e9fa62bc0fe766",
+      "label": "Review revision two",
+      "status": "FINALIZED",
+      "consensus_result": "MAJORITY_AGREE",
+      "execution_result": "SUCCESS",
+      "error": "null",
+      "leader_only": false,
+      "votes": {
+        "0x36728d2a123aB444E603EE5b2ad17d18Bb193557": "idle",
+        "0x3E5ee2507cc167C9925Bf10c67D7986581112024": "agree",
+        "0x76c25AFC12c75485703cCFfd0083AA6201455B25": "idle",
+        "0xDB1c35c1f05d885999b8f13e5735307BcC16Be88": "agree",
+        "0xE6BD8050758CB15fC88387223E31Ae2708B119dC": "agree"
+      }
+    },
+    {
+      "hash": "0x4a64a0b542d0e9449e2b0edfa1fbb59f3e97ae57c6c44076ca0932de854cb260",
+      "label": "Commit revision three",
+      "status": "FINALIZED",
+      "consensus_result": "MAJORITY_AGREE",
+      "execution_result": "SUCCESS",
+      "error": "null",
+      "leader_only": false,
+      "votes": {
+        "0x36728d2a123aB444E603EE5b2ad17d18Bb193557": "agree",
+        "0x4EDbE1FC9EAeC7b0EBA849b0C76AE73Eb0ad5C47": "agree",
+        "0x6737ca1d6BDF8b7C4f19143E2D55581Ca64eb7C3": "agree",
+        "0x76c25AFC12c75485703cCFfd0083AA6201455B25": "agree",
+        "0xDB1c35c1f05d885999b8f13e5735307BcC16Be88": "agree"
+      }
+    },
+    {
+      "hash": "0x8c92cb3586783b75a7fbda963d80506b62f2a1a74fe653e751f3e1be6554253d",
+      "label": "Review revision three",
+      "status": "FINALIZED",
+      "consensus_result": "MAJORITY_AGREE",
+      "execution_result": "SUCCESS",
+      "error": "null",
+      "leader_only": false,
+      "votes": {
+        "0x4EDbE1FC9EAeC7b0EBA849b0C76AE73Eb0ad5C47": "agree",
+        "0x5310dcF075E0BD47d29B8ec6581F736C767f54D2": "idle",
+        "0x6737ca1d6BDF8b7C4f19143E2D55581Ca64eb7C3": "agree",
+        "0x9ea87b28DcA2F79fe108CF06a4c13B4c876AC23d": "agree",
+        "0xDB1c35c1f05d885999b8f13e5735307BcC16Be88": "idle"
+      }
+    },
+    {
+      "hash": "0x2fe871aef52b398157c5a186a095cc24e8e8c46c87afb04813de5da43f4b082b",
+      "label": "Fourth revision rejected",
+      "status": "FINALIZED",
+      "consensus_result": "MAJORITY_AGREE",
+      "execution_result": "ERROR",
+      "error": "",
+      "leader_only": false,
+      "votes": {
+        "0x03D58A4DeF6fDFc032A56374785a5F571D07Bc11": "agree",
+        "0x3D83ab507785b95ca5C208bEc80CCe3D5ca98100": "agree",
+        "0x4aba638Cf0Cf5249437AaD968fC69dde46ae6BAC": "agree",
+        "0x6737ca1d6BDF8b7C4f19143E2D55581Ca64eb7C3": "idle",
+        "0xDB1c35c1f05d885999b8f13e5735307BcC16Be88": "idle"
+      }
+    },
+    {
+      "hash": "0xde9dee8f4c53fb6630681ea0808331fb70a3d6095a440c45a5bb5fd6e3ad2fcf",
+      "label": "Submit missing-notice comparison",
+      "status": "FINALIZED",
+      "consensus_result": "MAJORITY_AGREE",
+      "execution_result": "SUCCESS",
+      "error": "null",
+      "leader_only": false,
+      "votes": {
+        "0x36728d2a123aB444E603EE5b2ad17d18Bb193557": "agree",
+        "0x4404Fb70d490c935758146f42A73DC850FF95C71": "agree",
+        "0x6737ca1d6BDF8b7C4f19143E2D55581Ca64eb7C3": "agree",
+        "0xDB1c35c1f05d885999b8f13e5735307BcC16Be88": "agree",
+        "0xacc2459F341D7a887bcA8FAA62F1EC9378d4Bc67": "agree"
+      }
+    },
+    {
+      "hash": "0x80c52b369598bc7393c91cc7fcb0fae052cac85d2b45341c4ceb42c1f3d8ec97",
+      "label": "Temporary model failure / no revision consumed",
+      "status": "FINALIZED",
+      "consensus_result": "MAJORITY_DISAGREE",
+      "execution_result": "ERROR",
+      "error": "",
+      "leader_only": false,
+      "votes": {
+        "0x3D83ab507785b95ca5C208bEc80CCe3D5ca98100": "disagree",
+        "0x4EDbE1FC9EAeC7b0EBA849b0C76AE73Eb0ad5C47": "disagree",
+        "0x4aba638Cf0Cf5249437AaD968fC69dde46ae6BAC": "idle",
+        "0xDB1c35c1f05d885999b8f13e5735307BcC16Be88": "disagree",
+        "0xcE1d6bBB36B744536153966B4DD42276f5ADd0F8": "idle"
+      }
+    },
+    {
+      "hash": "0x5bc3ee09043ca6c6734d082ca4e25c80941db5d812971d7892dbe0ad055795ec",
+      "label": "Separate-account recovered missing-notice review",
+      "status": "FINALIZED",
+      "consensus_result": "MAJORITY_AGREE",
+      "execution_result": "SUCCESS",
+      "error": "null",
+      "leader_only": false,
+      "votes": {
+        "0x36728d2a123aB444E603EE5b2ad17d18Bb193557": "disagree",
+        "0x3E5ee2507cc167C9925Bf10c67D7986581112024": "agree",
+        "0x90402341F0B0e97b23023c0a87de957FB7148E0F": "agree",
+        "0x9ea87b28DcA2F79fe108CF06a4c13B4c876AC23d": "idle",
+        "0xE6BD8050758CB15fC88387223E31Ae2708B119dC": "agree"
+      }
     }
-  ]
+  ],
+  "frontendVerification": [
+    {
+      "hash": "0x6a00c9e6ca555852cb4f990bd001e402e33fd00d3d338cf8d38f0df3eb1cbd82",
+      "label": "Duplicate release rejected",
+      "displayError": "Error: Duplicate release or capacity reached",
+      "finalizedReads": 0,
+      "reportedCompletion": false
+    },
+    {
+      "hash": "0x04725c0ce5a8492da5b02ac476d2f83c7fd93dfde1ed0e32e368d09850df05f7",
+      "label": "Unauthorized release rejected",
+      "displayError": "Error: Only policy owner can submit",
+      "finalizedReads": 0,
+      "reportedCompletion": false
+    },
+    {
+      "hash": "0x2935d50a8b556443b488b62ae6ec05f356e56905617c4444f80cbff01d859d48",
+      "label": "Global reservation overflow rejected",
+      "displayError": "Error: Global reservation capacity reached",
+      "finalizedReads": 0,
+      "reportedCompletion": false
+    },
+    {
+      "hash": "0x2fe871aef52b398157c5a186a095cc24e8e8c46c87afb04813de5da43f4b082b",
+      "label": "Fourth revision rejected",
+      "displayError": "Error: Review current revision first or revision limit reached",
+      "finalizedReads": 0,
+      "reportedCompletion": false
+    },
+    {
+      "hash": "0x80c52b369598bc7393c91cc7fcb0fae052cac85d2b45341c4ceb42c1f3d8ec97",
+      "label": "Temporary model failure / no revision consumed",
+      "displayError": "Error: Temporary failure: retry same committed evidence; no revision consumed",
+      "finalizedReads": 0,
+      "reportedCompletion": false
+    },
+    {
+      "hash": "0xb8e64a2248c381d7cf39c74996441befddae49a13bf6e172c63b804936a43008",
+      "label": "Real successful submission",
+      "expectedFinalizedStateVerified": true
+    }
+  ],
+  "publicCommitmentsVerified": 13
 }
